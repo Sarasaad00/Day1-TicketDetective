@@ -23,6 +23,8 @@ namespace Day1_TicketDetective.Services
             if (patient == null)
                 return Result<Appointment>.Failure("Patient not found.");
 
+
+
             var doctor = _db.Doctors.FirstOrDefault(d => d.Id == doctorId);
             if (doctor == null)
                 return Result<Appointment>.Failure("Doctor not found.");
